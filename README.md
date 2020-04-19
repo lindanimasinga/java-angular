@@ -5,6 +5,10 @@ This project consist of a java/spring project as a root folder and angular proje
 ## LIVE demo hosted on AWS elastic bean stalk
 Here is the url to the Angular application: http://assessment-env.eba-jsk3jput.us-east-1.elasticbeanstalk.com/ 
 
+The Web page includes a home page users can register thier name surname and ID number. If invalid SA id number is entered. The api returns an error message displayed on the page.
+
+To view reports, navigate on the menu and click report, delete users.
+
 Here is the url to Swagger docs:  http://assessment-env.eba-jsk3jput.us-east-1.elasticbeanstalk.com/swagger-ui.html
 
 ## Building the Angular project
