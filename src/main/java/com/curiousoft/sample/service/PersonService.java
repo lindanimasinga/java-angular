@@ -2,6 +2,8 @@ package com.curiousoft.sample.service;
 
 import com.curiousoft.sample.model.Person;
 
+import java.util.List;
+
 public interface PersonService {
 
     boolean exists(Person person);
@@ -11,4 +13,6 @@ public interface PersonService {
     Person deleteByIdNumber(String idNumber);
 
     Person findById(String idnumber);
+
+    List<Person> findAll();
 }

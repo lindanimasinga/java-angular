@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("api")
@@ -31,7 +32,7 @@ public class PersonController {
 
     @RequestMapping(value = "/person/{idnumber}", method = RequestMethod.GET,
             consumes = "application/json", produces = "application/json")
-    public ResponseEntity<Person> addPerson(@PathVariable @ValidSAIdNumber String idnumber) {
+    public ResponseEntity<Person> getPerson(@PathVariable @ValidSAIdNumber String idnumber) {
 
         Person persistedPerson = personService.findById(idnumber);
         return persistedPerson != null ? ResponseEntity.ok(persistedPerson) : ResponseEntity.notFound().build();
@@ -43,5 +44,13 @@ public class PersonController {
 
         Person persistedPerson = personService.deleteByIdNumber(idnumber);
         return persistedPerson != null ? ResponseEntity.ok(persistedPerson) : ResponseEntity.notFound().build();
+    }
+
+    @RequestMapping(value = "/person", method = RequestMethod.GET,
+            consumes = "application/json", produces = "application/json")
+    public ResponseEntity<List<Person>> getAllPersons() {
+
+        List<Person> persistedPersons = personService.findAll();
+        return persistedPersons != null ? ResponseEntity.ok(persistedPersons) : ResponseEntity.notFound().build();
     }
 }

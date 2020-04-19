@@ -1,0 +1,24 @@
+<p class="d-flex justify-content-center">Subscribe to get more news about covid-19</p>  
+
+<div *ngFor="let error of errors" class="error d-flex justify-content-center">
+    {{error.defaultMessage}}
+</div>
+
+<div class="container d-flex justify-content-center">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" [(ngModel)]="person.name" name="name" class="form-control">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Surname</label>
+      <input type="text" [(ngModel)]="person.surname" name="surname" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">SA ID Number</label>
+      <input type="text" [(ngModel)]="person.idNumber" name="idNumber" class="form-control" >
+    </div>
+    <button type="submit" (click)="sendData()" class="btn btn-primary">Subscribe</button>
+  </form>
+</div>

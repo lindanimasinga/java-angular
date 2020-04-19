@@ -13,7 +13,7 @@ export class InterstellarService {
   constructor(private http: HttpClient) {
   }
 
-  getAllPlanets(): Observable<Person[]> {
+  getAllUsers(): Observable<Person[]> {
     return this.http.get<Person[]>(`${environment.url}/person`,{ 
     headers: new HttpHeaders(
       {

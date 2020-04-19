@@ -6,10 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterstellarService } from './services/interstellar-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ReportComponent } from './components/report/report.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReportComponent,
+    RegisterComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
