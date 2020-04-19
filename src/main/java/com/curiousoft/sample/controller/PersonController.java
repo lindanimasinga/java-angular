@@ -10,11 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
+@RequestMapping("api")
 public class PersonController {
 
+    @Autowired
     private PersonService personService;
 
-    @Autowired
+    public PersonController() {
+    }
+
     public PersonController(PersonService personService) {
     }
 

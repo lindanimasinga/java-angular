@@ -26,3 +26,7 @@ body {
     width: 300px;
     margin: 20px;
 }
+
+.error {
+    color: red;
+}

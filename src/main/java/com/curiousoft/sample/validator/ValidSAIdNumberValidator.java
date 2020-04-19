@@ -8,12 +8,6 @@ import javax.validation.ConstraintValidatorContext;
 
 public class ValidSAIdNumberValidator implements ConstraintValidator<ValidSAIdNumber, String> {
 
-
-    @Override
-    public void initialize(ValidSAIdNumber constraintAnnotation) {
-
-    }
-
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         return SampleUtils.isSAIdNumber(value);

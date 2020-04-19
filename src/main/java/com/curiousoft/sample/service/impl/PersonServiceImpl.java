@@ -5,7 +5,9 @@ import com.curiousoft.sample.repo.PersonRepo;
 import com.curiousoft.sample.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PersonServiceImpl implements PersonService {
 
 

@@ -25,6 +25,10 @@
 
 <p class="d-flex justify-content-center">Subscribe to get more news about covid-19</p>  
 
+<div *ngFor="let error of errors" class="error d-flex justify-content-center">
+    {{error.defaultMessage}}
+</div>
+
 <div class="container d-flex justify-content-center">
   <form>
     <div class="form-group">
