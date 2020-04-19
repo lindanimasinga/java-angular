@@ -10,11 +10,6 @@ import { InterstellarService } from 'src/app/services/interstellar-service.servi
 export class ReportComponent implements OnInit {
 
   person: Person[] = [
-    {
-      name: "test",
-      surname: "user",
-      idNumber: "id"
-    }
   ]
   
   constructor(private api: InterstellarService) { }
@@ -26,7 +21,8 @@ export class ReportComponent implements OnInit {
   }
 
   deleteUser(user: Person) {
-
+    this.api.getDeletePerson(user)
+        .subscribe(() => this.ngOnInit())
   }
 
 }

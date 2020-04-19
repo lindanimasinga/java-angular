@@ -20,6 +20,14 @@ export class InterstellarService {
           'Content-Type': 'application/json',
       })});
   }
+
+  getDeletePerson(person: Person): Observable<any> {
+    return this.http.delete(`${environment.url}/person/${person.idNumber}`,{ 
+    headers: new HttpHeaders(
+      {
+          'Content-Type': 'application/json',
+      })});
+  }
   
   addPerson(person: Person): Observable<any> {
     return this.http.post(`${environment.url}/person`, person, {
