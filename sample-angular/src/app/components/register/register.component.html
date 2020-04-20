@@ -1,7 +1,10 @@
-<p class="d-flex justify-content-center">Subscribe to get more news about covid-19</p>  
+<p class="d-flex justify-content-center">Please enter your name and ID number</p>  
 
 <div *ngFor="let error of errors" class="error d-flex justify-content-center">
     {{error.defaultMessage}}
+</div>
+<div *ngIf="successful" class="success d-flex justify-content-center">
+    Registration successful.
 </div>
 
 <div class="container d-flex justify-content-center">

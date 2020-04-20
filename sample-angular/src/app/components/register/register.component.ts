@@ -14,6 +14,7 @@ export class RegisterComponent {
   
   title = 'sample-angular';
   person: Person =  new Person()
+  successful: boolean
   errors = []
 
   constructor(private api: InterstellarService) {
@@ -24,8 +25,11 @@ export class RegisterComponent {
     this.api.addPerson(this.person)
             .subscribe(() =>{
               console.log(`${this.person.name} added`)
+              this.successful = true
+              this.errors = []
             },
             (error: HttpErrorResponse) => {
+                this.successful = false
                 var errorResponse = error.error as ErrorResponse
                 if(errorResponse.errors) {
                   this.errors = errorResponse.errors
