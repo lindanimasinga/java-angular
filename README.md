@@ -15,7 +15,7 @@ Here is the url to Swagger docs:  http://assessment-env.eba-jsk3jput.us-east-1.e
 
 run ./mvn install to generate a war file. The war file should found on root/target/sample-1.0.war
 
-run java -jar /target/sample-1.0.jar to start the application
+run java -jar /target/sample-1.0.war to start the application
 
 to access the API webpage got to http://localhost:8080
 
