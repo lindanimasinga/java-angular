@@ -7,7 +7,7 @@ Here is the url to the Angular application: http://assessment-env.eba-jsk3jput.u
 
 The Web page includes a home page users can register thier name surname and ID number. If invalid SA id number is entered. The api returns an error message displayed on the page.
 
-To view reports, navigate on the menu and click report, delete users.
+To view reports, navigate on the menu and click report.
 
 Here is the url to Swagger docs:  http://assessment-env.eba-jsk3jput.us-east-1.elasticbeanstalk.com/swagger-ui.html
 
