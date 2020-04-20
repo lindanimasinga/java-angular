@@ -1,13 +1,15 @@
-<div class="container list-group d-flex align-items-center">
+<div class="container d-flex align-items-center">
 
-    <div *ngFor="let user of person" class="card">
-        <div class="card-body">
-            <div>Name: {{user.name}}</div>
-            <div>Surname: {{user.surname}}</div>
-            <div>ID: {{user.idNumber}}</div>
-            <div>Date: {{user.createdDate | date: 'dd/MM/yyyy'}}</div>
-            <br>
-            <button class="btn btn-primary" (click)="deleteUser(user)">Delete</button>
-        </div>
-    </div>
+    <table class="container">
+        <tr>
+            <th >Name</th>
+            <th >Surname</th>
+            <th >ID Number</th>
+        </tr>
+        <tr *ngFor="let user of person">
+            <td >{{user.name}}</td>
+            <td >{{user.surname}}</td>
+            <td >{{user.idNumber}}</td>
+        </tr>
+    </table>
 </div>

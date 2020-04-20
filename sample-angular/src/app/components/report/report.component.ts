@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/app/models/person';
 import { InterstellarService } from 'src/app/services/interstellar-service.service';
+import PivotGridDataSource from 'devextreme/ui/pivot_grid/data_source';
 
 @Component({
   selector: 'app-report',
@@ -10,6 +11,11 @@ import { InterstellarService } from 'src/app/services/interstellar-service.servi
 export class ReportComponent implements OnInit {
 
   person: Person[] = [
+    {
+      name: "test",
+      surname: "user",
+      idNumber: "89091"
+    }
   ]
   
   constructor(private api: InterstellarService) { }
@@ -17,12 +23,9 @@ export class ReportComponent implements OnInit {
   ngOnInit() {
     //TODO implement pagination
     this.api.getAllUsers()
-      .subscribe(users => this.person = users)
-  }
-
-  deleteUser(user: Person) {
-    this.api.getDeletePerson(user)
-        .subscribe(() => this.ngOnInit())
+      .subscribe(users => {
+        this.person = users
+      })
   }
 
 }

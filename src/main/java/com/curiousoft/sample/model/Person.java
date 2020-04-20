@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.Objects;
 import java.util.UUID;
 
 
@@ -93,5 +94,13 @@ public class Person {
 
     public void setModified(Date modified) {
         this.modified = modified;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(idNumber, person.idNumber);
     }
 }

@@ -38,11 +38,7 @@ export class InterstellarService {
     }).pipe(
       map((resp: Response) => {
         console.log("checking error")
-        if(resp.status == 200) {
-          return resp
-        } else {
-          throwError(resp)
-        }
+        console.log(JSON.stringify(resp))
       })
     );
 }
